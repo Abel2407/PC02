@@ -1,0 +1,38 @@
+﻿@using PC02.Areas.Sales.Models
+@{
+    var customers = ViewBag.CustomerList as IEnumerable<Customer>;
+
+    
+}
+
+
+ <h1>@ViewBag.TitleViewBag</h1>
+
+
+<table border="1">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in customers)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Country</td>
+                <td>@item.Phone</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
